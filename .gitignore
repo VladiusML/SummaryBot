@@ -1,0 +1,11 @@
+
+.venv/
+
+.env
+
+.workspace
+
+__pycache__/
+*.py[cod]
+
+*.code-workspace
