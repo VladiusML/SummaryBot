@@ -3,9 +3,16 @@ from telegram import Update, ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes 
 from summary_video import summarize_video
 from summary_article import summarize_article
+from dotenv import load_dotenv
+import os 
 
-TOKEN: Final = "7035252070:AAEdZrQFAKntXf0lZjoyAS-wtddeSq1yYtY"
-BOT_USERNAME: Final = "@AI_summaryBot"
+load_dotenv()
+
+token = os.getenv("TOKEN")
+bot_username = os.getenv("BOT_USERNAME")
+
+TOKEN: Final = token
+BOT_USERNAME: Final = bot_username
 
 # Commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
